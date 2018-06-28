@@ -10,7 +10,7 @@ class Genre
   end 
   
  def songs 
-   binding.pry 
+  # binding.pry 
    @songs 
  end 
  
