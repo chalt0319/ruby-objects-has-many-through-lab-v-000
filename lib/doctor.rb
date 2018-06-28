@@ -29,7 +29,7 @@ class Doctor
     @appointments.each do |app|
       new_patients << app.patient 
     end 
-    binding.pry 
+    # binding.pry 
     new_patients.uniq 
   end 
   
