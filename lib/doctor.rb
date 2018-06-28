@@ -7,7 +7,6 @@ class Doctor
     @name = name 
     @@all << self 
     @appointments = []
-    @patients = []
   end 
   
   def self.all 
@@ -17,7 +16,6 @@ class Doctor
   def new_appointment(date, patient)
     new_app = Appointment.new(patient, self, date)
     @appointments << new_app
-    @patients << new_app
     new_app
   end 
   
@@ -26,7 +24,11 @@ class Doctor
   end 
   
   def patients
-    @patients
+    new_patients = []
+    @appointments.each do |app|
+      new_patients << app.patient 
+    end 
+    new_patients.uniq 
   end 
   
 end 
