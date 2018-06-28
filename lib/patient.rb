@@ -16,4 +16,12 @@ class Patient
     @appointments
   end 
   
+  def doctors 
+    the_doctors = [] 
+    @appointments.each do |app|
+      the_doctors << app.doctor 
+    end 
+    the_doctors.uniq 
+  end 
+  
 end 
