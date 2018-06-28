@@ -7,5 +7,8 @@ class Genre
     @@all << self
   end 
   
+ def songs 
+   @songs 
+ end 
  
 end 
