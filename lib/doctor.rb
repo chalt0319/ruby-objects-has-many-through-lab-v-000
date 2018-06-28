@@ -7,6 +7,7 @@ class Doctor
     @name = name 
     @@all << self 
     @appointments = []
+    @patients = []
   end 
   
   def self.all 
@@ -16,10 +17,16 @@ class Doctor
   def new_appointment(date, patient)
     new_app = Appointment.new(patient, self, date)
     @appointments << new_app
+    @patients << new_app
     new_app
   end 
   
   def appointments
     @appointments
   end 
+  
+  def patients
+    @patients
+  end 
+  
 end 
